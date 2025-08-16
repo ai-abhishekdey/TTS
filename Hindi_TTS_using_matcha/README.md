@@ -136,7 +136,7 @@ Hindi_fem_mono/Hindi_fem_audio_22KHz/train_hindifem_00003.wav|रॉकेट �
 
 ## Configuration files:
 
-* Inside [configs/experiment](configs/experiment) folder, Create the below config files similar to ljspeech
+* Inside [Matcha-TTS/configs/experiment](https://github.com/shivammehta25/Matcha-TTS/tree/main/configs/experiment) folder, Create the below config files similar to ljspeech
 
 and replace **ljspeech** with **hindi** in all places
 
@@ -149,7 +149,7 @@ configs/experiment/hindi_min_memory.yaml
 
 ```
 
-* Inside [configs/data] folder, create **hindi.yaml**
+* Inside [Matcha-TTS/configs/data](https://github.com/shivammehta25/Matcha-TTS/tree/main/configs/data) folder, create **hindi.yaml**
 
 ```
 configs/data/hindi.yaml
@@ -177,7 +177,7 @@ python3 extract_uniq_characters.py Hindi_fem_mono/Hindi_fem_mono.txt
 
 ```
 
-* Add the extracted uniq characters in **_hindi_trans** as below in [macha/text/symbols.txt](macha/text/symbols.txt)
+* Add the extracted uniq characters in **_hindi_trans** as below in [Matcha-TTS/macha/text/symbols.txt](https://github.com/shivammehta25/Matcha-TTS/blob/main/matcha/text/symbols.py)
 
 ```
 _pad = "_"
@@ -194,9 +194,9 @@ SPACE_ID = symbols.index(" ")
 ```
 
 
-## Add hindi cleaners [macha/text/cleaners.py](macha/text/cleaners.py)
+## Add hindi cleaners 
 
-* Append below **hindi_cleaners** function to 
+* Append below **hindi_cleaners** function to [Matcha-TTS/macha/text/cleaners.py](https://github.com/shivammehta25/Matcha-TTS/blob/main/matcha/text/cleaners.py)
 ```
 def hindi_cleaners(text):
     """Cleaner for Hindi text (Devanagari script)."""
@@ -276,7 +276,7 @@ python matcha/train.py experiment=hindi trainer.devices=[0,1]
 
 
 
-* Replace **english_cleaners2** in  line 51: [matcha/cli.py](matcha/cli.py)
+* Replace **english_cleaners2** in  line 51: [Matcha-TTS/matcha/cli.py](https://github.com/shivammehta25/Matcha-TTS/blob/main/matcha/cli.py)
 
 ```
 intersperse(text_to_sequence(text, ["english_cleaners2"])[0], 0),

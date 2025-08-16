@@ -10,8 +10,6 @@ conda create -n matcha-tts python=3.10 -y
 
 conda activate matcha-tts
 
-pip install --upgrade peft
-
 ```
 
 ## Installation
@@ -22,6 +20,8 @@ git clone https://github.com/shivammehta25/Matcha-TTS.git
 cd Matcha-TTS
 
 pip install -e .
+
+pip install --upgrade peft
 
 ```
 
@@ -67,7 +67,7 @@ LJSpeech-1.1/wavs/LJ050-0234.wav|Under these codes, in the industries covered, c
 
 ## Config update
 
-* Update the paths, batch size and num_workers as per your machine configuration in [configs/data/ljspeech.yaml](configs/data/ljspeech.yaml)
+* Update the paths, batch size and num_workers as per your machine configuration in [Matcha-TTS/configs/data/ljspeech.yaml](https://github.com/shivammehta25/Matcha-TTS/blob/main/configs/data/ljspeech.yaml)
 
 **By default**
 
@@ -104,7 +104,7 @@ matcha-data-stats -i ljspeech.yaml
 
 ```
 
-* update these parameters in [configs/data/ljspeech.yaml](configs/data/ljspeech.yaml)
+* update these parameters in [Matcha-TTS/configs/data/ljspeech.yaml](https://github.com/shivammehta25/Matcha-TTS/blob/main/configs/data/ljspeech.yaml)
 
 
 **By default**
