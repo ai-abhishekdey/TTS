@@ -36,7 +36,7 @@ tar -xvjf LJSpeech-1.1.tar.bz2
 
 ```
 
-## Train-val-test splits:
+## Train-val-test splits
 
 * The LJ Speech datasat is split into train, val and test sets as follows
 
@@ -65,6 +65,8 @@ LJSpeech-1.1/wavs/LJ050-0234.wav|Under these codes, in the industries covered, c
 ```
 
 
+## Config update
+
 * Update the paths, batch size and num_workers as per your machine configuration in [configs/data/ljspeech.yaml](configs/data/ljspeech.yaml)
 
 **By default**
@@ -87,7 +89,7 @@ num_workers: 4
 
 ```
 
-## Generate normalisation statistics with the yaml file of dataset configuration
+## Generate normalisation statistics
 
 ```
 
@@ -113,7 +115,7 @@ data_statistics:  # Computed for ljspeech dataset
   mel_std: 2.116101
 
 ```
-**By default**
+**Updated**
 
 ```
 data_statistics:  # Computed for ljspeech dataset
